@@ -12,6 +12,13 @@
     font-family: "Poppins", sans-serif;
 }
 
+@font-face {
+    font-family: 'EnglishTowne';
+    src: url('./fonts/EnglishTowne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --main-color: #4e773c;
     --second-color: #324d26;
@@ -22,10 +29,16 @@ section {
     padding: 50px 10%;
 }
 
+*::selection {
+    color: white;
+    background: var(--main-color);
+}
+
 img {
     width: 100%;
 }
-header{
+
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,17 +52,21 @@ header{
     padding: 15px 10%;
     transition: 0.2s;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
 }
+
 .logo img {
     width: 40px;
 }
-.navbar{
+
+.navbar {
     display: flex;
 }
-.navbar a{
+
+.navbar a {
     font-size: 1 rem;
     padding: 11px 20px;
     color: var(--second-color);
@@ -57,12 +74,82 @@ header{
     text-transform: uppercase;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: var(--main-color);
 }
-#menu-icon{
+
+#menu-icon {
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
     display: none;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ded9ab;
+    gap: 1rem;
+}
+
+.home-text {
+    flex: 1 1 17rem;
+}
+
+.home-img {
+    flex: 1 1 17rem;
+}
+
+.home-img img {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-11px, 0);
+    }
+
+    50% {
+        transform: translate(-0px, -11px);
+    }
+
+    100% {
+        transform: translate(-11px, 0);
+    }
+}
+
+.home-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.home-text h1 {
+    font-family: 'EnglishTowne', serif;
+    font-size: 7rem;
+    color: var(--main-color);
+    font-weight: lighter;
+}
+
+.home-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--second-color);
+    margin: 0.5rem 0 1.4rem;
+}
+
+.btn {
+    padding: 7px 16px;
+    border: 2px solid var(--second-color);
+    border-radius: 40px;
+    color: var(--second-color);
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: white;
+    background: var(--second-color);
 }

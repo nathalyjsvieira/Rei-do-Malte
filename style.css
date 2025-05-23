@@ -236,25 +236,57 @@ header {
     margin-top: 2rem;
 }
 
-.about-img {
+.about-img,
+.recipe-img {
     flex: 1 1 21rem;
 }
 
-.about-img img {
+.about-img img,
+.recipe-img img {
     max-width: 100%;
     height: auto;
 }
 
-.about-text {
+.about-text,
+.recipe-text {
     flex: 1 1 21rem;
 }
 
-.about-text h2{
+.about-text h2, 
+.recipe-text h2 {
+    font-size: 1.2rem;
+    color: var(--second-color);
+    margin: 0.5rem 0 1rem;
+}
+
+.about-text p,
+.recipe-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    background: #ebdbc8;
+    gap: 1.5rem;
+}
+
+.team-img{
+    flex: 1 1 17rem;
+}
+
+.team-text{
+    flex: 1 1 17rem;
+}
+
+.team-text h2{
     font-size: 1.2rem;
     color: var(--second-color);
 }
 
-.about-text p{
+.team-text p{
     margin: 0.5rem 0 1rem;
     text-align: justify;
 }
+

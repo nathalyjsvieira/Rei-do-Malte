@@ -290,3 +290,130 @@ header {
     text-align: justify;
 }
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+
+.social a .ri-github-fill{
+    padding: 5px;
+    color: #fff;
+    background: black;
+    border-radius: 50%;
+}
+
+.social a .ri-github-fill:hover{
+    background-color: var(--main-color);
+}
+
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+
+.links a:hover{
+    color: var(--main-color);
+}
+
+.footer p{
+    text-align: center;
+    margin: 1rem 0 1rem;
+}
+
+/* Making our website responsive */
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(14, 55, 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+    .home-text span{
+        font-size: 0.9rem;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .home-text{
+        padding-top: inherit;
+    }
+    .shop-container .box{
+        margin-top: 6rem;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+    .team{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 364px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

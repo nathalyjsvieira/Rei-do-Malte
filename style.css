@@ -20,9 +20,26 @@
 }
 
 :root {
+
+/* Colors */
     --main-color: #4e773c;
     --second-color: #324d26;
     --third-color: #d9cb4c;
+
+/* Fonts */
+    --biggest-font-size: 4.5rem;
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+
+/* Font weight */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
 }
 
 section {
@@ -290,6 +307,89 @@ header {
     text-align: justify;
 }
 
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.invite__container,
+.invite__info{
+    row-gap: 2rem;
+}
+
+.invite__info{
+    color: var(--second-color);
+    text-align: center;
+}
+
+.invite__title{
+    font-size: var(--h1-font-size);
+}
+
+.invite__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.invite__social-link{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    transition: transform .4s;
+}
+
+.invite__social-link:hover{
+    transform: translateY(-.25rem);
+}
+
+.invite__address{
+    font-style: normal;
+}
+
+.invite__map{
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+}
+
+.invite__map span{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.invite__images{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.invite__shape{
+    width: 300px;
+    height: 300px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+.invite__image{
+    width: 400px;
+    position: absolute;
+    top: -1.5rem;
+    mask-image: linear-gradient(to bottom,
+                var(--main-color) 80%,
+                transparent 100%);
+}
+
+/* Footer */
+
 .footer{
     display: flex;
     flex-direction: column;
@@ -327,6 +427,26 @@ header {
     text-align: center;
     margin: 1rem 0 1rem;
 }
+
+/* Scroll bar */
+::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: var(--second-color);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 0.6rem;
+    background-color: var(--third-color);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    width: 0.6rem;
+    background-color: #ebdbc8;
+}
+
+
+/* Scroll up */
+
 
 /* Making our website responsive */
 @media (max-width: 1150px) {
@@ -417,3 +537,4 @@ header {
         text-align: center;
     }
 }
+

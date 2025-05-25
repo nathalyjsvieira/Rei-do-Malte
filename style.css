@@ -449,27 +449,40 @@ header {
 
 
 /* Making our website responsive */
-@media (max-width: 1150px) {
-    header{
-        padding: 18px 7%;
+
+@media (max-width: 330px) {
+    .invite__shape{
+        width: 250px;
+        height: 250px;
     }
-    section{
-        padding: 50px 7%;
-    }
-    .home-text h1{
-        font-size: 3rem;
-    }
-    .home-text h2{
-        font-size: 1.5rem;
+    .invite__image{
+        width: 190px;
     }
 }
 
-@media (max-width: 991px) {
-    header{
-        padding: 18px 4%;
+@media (max-width: 364px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
-    section{
-        padding: 50px 4%;
+}
+
+@media (max-width: 560px) {
+    .home-text{
+        padding-top: inherit;
+    }
+    .shop-container .box{
+        margin-top: 6rem;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+    .team{
+        flex-direction: column-reverse;
     }
 }
 
@@ -512,29 +525,77 @@ header {
     }
 }
 
-@media (max-width: 560px) {
-    .home-text{
-        padding-top: inherit;
+@media (min-width: 768px) {
+    .invite__container{
+        justify-content: center;
     }
-    .shop-container .box{
-        margin-top: 6rem;
+    .invite__info{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        column-gap: 6rem;
     }
-    .heading h1{
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
         font-size: 1.5rem;
     }
-    .heading span{
-        font-size: 0.9rem;
-    }
-    .team{
-        flex-direction: column-reverse;
-    }
 }
 
-@media (max-width: 364px) {
-    .links{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+@media (min-width: 1150px) {
+    .container{
+        margin-inline: auto;
+    }
+    .invite .heading .h1{
+        font-size: var(--biggest-font-size);
+    }
+    .invite__container{
+        grid-template-columns: repeat(3, max-content);
+        align-items: flex-start;
+        column-gap: 3rem;
+    }
+    .invite__info{
+        grid-template-columns: max-content;
+        row-gap: 6rem;
+        margin-top: 7rem;
+    }
+    .invite__info:nth-child(2){
+        order: 2;
+    }
+    .invite__title{
+        font-size: var(--h2-font-size);
+        margin-bottom: 1rem;
+    }
+    .invite__social{
+        column-gap: 1.5rem;
+    }
+    .invite__images{
+        margin-top: 0;
+    }
+    .invite__shape{
+        width: 500px;
+        height: 500px;
+    }
+    .invite__image{
+        width: 650px;
+        top: -3,5rem;
     }
 }
-

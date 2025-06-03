@@ -630,6 +630,46 @@ header {
   background: var(--main-color);
 }
 
+.docs{
+    background-color: var(--second-color);
+}
+
+.docs__card{
+    background-color: var(--main-color);
+}
+
+.docs__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.docs__link{
+    display: block;
+    position: relative;
+    background-color: var(--second-color);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    color: white;
+    transform: transform .4s;
+}
+
+.docs__description{
+    margin-bottom: 1.5rem;
+}
+
+.docs__link i{
+    position: absolute;
+    top: 1.8rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform .4s;
+}
+
+
+
 /* Footer */
 
 .footer{

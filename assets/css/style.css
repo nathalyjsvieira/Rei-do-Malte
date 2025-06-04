@@ -630,12 +630,8 @@ header {
   background: var(--main-color);
 }
 
-.docs{
-    background-color: var(--second-color);
-}
-
 .docs__card{
-    background-color: var(--main-color);
+    background-color: var(--second-color);
 }
 
 .docs__title {
@@ -649,7 +645,7 @@ header {
 .docs__link{
     display: block;
     position: relative;
-    background-color: var(--second-color);
+    background-color: var(--main-color);
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     color: white;
     transform: transform .4s;
@@ -668,6 +664,35 @@ header {
     transition: transform .4s;
 }
 
+.docs__link:hover{
+    transform: translateY(-.35rem);
+}
+
+.docs__link:hover i{
+    transform: translateX(.5rem);
+}
+
+.docs__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 2 colunas de tamanho igual */
+    gap: 2rem; /* Espaçamento entre os cards, opcional */
+  }
+
+.docs__data{
+    text-align: center;
+}
+
+.docs__data span{
+    font-size: 0.9rem;
+}
+
+.docs__data h1{
+    font-size: 1.5rem;
+}
+
+.docs__description{
+    margin-bottom: 2rem;
+}
 
 
 /* Footer */
